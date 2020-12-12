@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="386" Width="738" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" KeyDown="Window_KeyDown">
-    <Grid Background="White" VerticalAlignment="Top" Margin="0">
+        Title="MainWindow" Height="386" Width="738" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+    <Grid Background="White" VerticalAlignment="Top" Margin="0" Height="356">
         <Border CornerRadius="10" Padding="2" Width="43" RenderTransformOrigin="0.844,0.439" HorizontalAlignment="Left" Margin="10,138,0,0" Height="40" VerticalAlignment="Top">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
@@ -908,33 +908,17 @@
             </Button>
         </Border>
         <Label Content="Speed:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,4,0,0" FontSize="14"/>
-        <Label Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,5,0,0" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="speed" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,5,0,0" FontWeight="Bold" FontSize="14"/>
         <Label Content="chars/min" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="79,4,0,0" FontSize="14"/>
         <Label Content="Fails:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,4,0,0" FontSize="14"/>
-        <Label Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,5,0,0" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="faills" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,5,0,0" FontWeight="Bold" FontSize="14"/>
         <Slider Value="1" Minimum="1" Maximum="10" SelectionStart="1" IsSelectionRangeEnabled="True" HorizontalAlignment="Left" Margin="423,10,0,0" VerticalAlignment="Top" Width="143" ValueChanged="Slider_ValueChanged"/>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="342,33,0,0" VerticalAlignment="Top" Width="154" Click="Button_Click"/>
+        <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Margin="342,33,0,0" VerticalAlignment="Top" Width="154" Click="start_Click"/>
         <Label Content="Difficulty:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="342,4,0,0" FontSize="14"/>
         <Label x:Name="difficulty" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="402,5,0,0" FontWeight="Bold" FontSize="14"/>
         <CheckBox Content="Case Sensitive" HorizontalAlignment="Left" Margin="571,13,0,0" VerticalAlignment="Top"/>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="501,33,0,0" VerticalAlignment="Top" Width="154" IsEnabled="False"/>
-        <TextBox x:Name="check" HorizontalAlignment="Left" Height="32" Margin="3,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="716" RenderTransformOrigin="0.292,-0.783" Foreground="Black" FontSize="16">
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="-1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF0BF300"/>
-                    <GradientStop Color="#FF0AD2FF"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="3,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="716" RenderTransformOrigin="0.292,-0.783" Foreground="Black" FontSize="16">
+        <Button x:Name="stop" Content="Stop" HorizontalAlignment="Left" Margin="501,33,0,0" VerticalAlignment="Top" Width="154" IsEnabled="False" Click="stop_Click"/>
+        <TextBox x:Name="check" HorizontalAlignment="Left" Height="54" Margin="6,71,1,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="716" RenderTransformOrigin="0.292,-0.783" Foreground="Black" FontSize="18" TextAlignment="Center" Padding="5,0,0,0">
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
