@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="386" Width="738" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid Background="White" VerticalAlignment="Top" Margin="0" TextInput="Grid_TextInput">
+        Title="MainWindow" Height="386" Width="738" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" KeyDown="Window_KeyDown">
+    <Grid Background="White" VerticalAlignment="Top" Margin="0">
         <Border CornerRadius="10" Padding="2" Width="43" RenderTransformOrigin="0.844,0.439" HorizontalAlignment="Left" Margin="10,138,0,0" Height="40" VerticalAlignment="Top">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
@@ -434,7 +434,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <Button Cursor="Hand" x:Name="button28" BorderBrush="Transparent" Background="#FFFF40B9" Foreground="Black" FontSize="24"
-                Content="Tab" FontWeight="Bold">
+                Content="CapsLk" FontWeight="Bold">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
